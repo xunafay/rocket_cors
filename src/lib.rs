@@ -470,7 +470,7 @@ impl<T> AllOrSome<T> {
 
 /// A wrapper type around `rocket::http::Method` to support serialization and deserialization
 #[derive(Clone, Copy, PartialEq, Eq, Hash, Debug)]
-pub struct Method(http::Method);
+pub struct Method(pub http::Method);
 
 impl FromStr for Method {
     type Err = ();
